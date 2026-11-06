@@ -1,0 +1,52 @@
+:root{
+  --indigo:#2B2D5B; --bata:#C8553D; --krem:#F6F1E7; --tinta:#1D1D2B;
+  --serif:"Cormorant Garamond",Georgia,serif; --sans:"Jost",system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--krem);color:var(--tinta);line-height:1.65;font-size:17px}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--bata);outline-offset:3px}
+
+.atas{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;padding:18px 6vw;border-bottom:1px solid #D9CFBB}
+.logo{font-family:var(--serif);font-weight:700;font-size:1.6rem;text-decoration:none;color:var(--indigo)}
+.atas nav{display:flex;gap:20px}
+.atas nav a{text-decoration:none;font-weight:500}
+.atas nav a:hover{color:var(--bata)}
+
+.hero{display:grid;grid-template-columns:1.1fr .9fr;min-height:70vh}
+.hero-teks{padding:8vh 6vw;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;gap:16px}
+.kecil{text-transform:uppercase;letter-spacing:.14em;font-size:.8rem;color:var(--bata);font-weight:500}
+.hero h1{font-family:var(--serif);font-size:clamp(2.6rem,6vw,4.4rem);line-height:1.02;color:var(--indigo);max-width:11ch}
+.hero-teks p:not(.kecil){max-width:44ch}
+.hero-motif{background:
+  repeating-linear-gradient(90deg,var(--indigo) 0 22px,var(--bata) 22px 30px,var(--indigo) 30px 52px,#F1E6D3 52px 58px)}
+.tombol{display:inline-block;background:var(--indigo);color:#fff;padding:14px 26px;text-decoration:none;font-weight:500;margin-top:8px}
+.tombol:hover{background:var(--bata)}
+
+.blok{padding:64px 6vw}
+.blok h2{font-family:var(--serif);font-size:2.2rem;color:var(--indigo);margin-bottom:24px}
+
+.kartu-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:28px}
+.kartu h3{font-family:var(--serif);font-size:1.4rem;margin-top:12px}
+.kartu p{color:#55556B;font-size:.95rem}
+.harga{display:block;margin-top:4px;font-weight:500;color:var(--bata)}
+.kain{aspect-ratio:4/5;background:
+  repeating-linear-gradient(90deg,var(--a) 0 14px,var(--b) 14px 18px,var(--a) 18px 36px)}
+
+.cerita{background:var(--indigo);color:#EDE7F6}
+.cerita h2{color:#fff}
+.cerita p{max-width:56ch;font-size:1.1rem}
+
+.info{list-style:none;padding:0;margin-bottom:24px}
+.info li{padding:8px 0;border-bottom:1px solid #D9CFBB}
+.info strong{display:inline-block;min-width:110px}
+
+footer{text-align:center;padding:22px;font-size:.9rem;color:#55556B;border-top:1px solid #D9CFBB}
+
+@media (max-width:720px){
+  .hero{grid-template-columns:1fr}
+  .hero-motif{min-height:120px;order:-1}
+  .info strong{display:block}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
